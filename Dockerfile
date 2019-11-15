@@ -5,4 +5,4 @@ RUN $HOME/.cargo/bin/rustup override set nightly
 RUN $HOME/.cargo/bin/rustup update
 VOLUME ["/code"]
 WORKDIR /code
-ENTRYPOINT ["cargo build --release"]
+ENTRYPOINT ["$HOME/.cargo/bin/cargo build --release"]
